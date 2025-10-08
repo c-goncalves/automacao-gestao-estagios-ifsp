@@ -1,5 +1,8 @@
-DirectoryIndex index.php index.html
-Options -Indexes
-<FilesMatch "\.php$">
-    SetHandler application/x-httpd-php
-</FilesMatch>
+
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Defina o pacote “ea-php82” como a linguagem padrão de programação “PHP”.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php82___lsphp .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
