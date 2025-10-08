@@ -13,7 +13,6 @@ $feedback = $feedback ?? '';
         <div class="card nav" style="margin-top:12px">
 
            <div class="steps nav-link" aria-hidden="false">
-                <a href="#" class="step active" data-step="0">Orientações</a>
                 <a href="#" class="step" data-step="1">Estagiário</a>
                 <a href="#" class="step" data-step="2">Unidade Concedente</a>
                 <a href="#" class="step" data-step="3">Supervisor</a>
@@ -23,6 +22,7 @@ $feedback = $feedback ?? '';
 
 
             <form id="termoForm" action="<?php echo BASE_URL; ?>pages/solicitacoes/scripts/salvar_solicitacao.php" method="POST" enctype="multipart/form-data">
+                
                 <!-- <fieldset data-step="0">
                     <h4>Leia atentamente as orientações abaixo</h4>
                     <p>O Termo de Compromisso é ... (incluir texto completo das orientações)</p>
@@ -299,20 +299,32 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const steps = Array.from(form.querySelectorAll('fieldset'));
     const stepLinks = Array.from(document.querySelectorAll('.steps .step'));
+    const stepsNav = document.querySelector('.steps.nav-link');
     let current = 0;
 
     function showStep(index){
         steps.forEach((fs,i)=> fs.style.display = i===index ? 'block':'none');
         stepLinks.forEach((link,i)=> link.classList.toggle('active', i===index));
+
+        // Esconde nav completamente no step 0
+        if(index === 0){
+            stepsNav.style.opacity = '0';
+            stepsNav.style.pointerEvents = 'none';
+            stepsNav.style.height = '0';
+        } else {
+            stepsNav.style.opacity = '1';
+            stepsNav.style.pointerEvents = 'auto';
+            stepsNav.style.height = 'auto';
+        }
+
         current = index;
-        // window.scrollTo({top: form.offsetTop - 20, behavior: 'smooth'});
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
     form.addEventListener('click', function(e){
         const nextBtn = e.target.closest('[data-next]');
         const prevBtn = e.target.closest('[data-prev]');
-        
+
         if(nextBtn){
             e.preventDefault();
             if(current < steps.length - 1){
@@ -340,7 +352,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
     showStep(0);
 });
+
 </script>
+
 
 <?php
 require_once __DIR__ . '/../../../../../includes/footer.php';

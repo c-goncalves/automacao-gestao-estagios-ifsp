@@ -8,6 +8,7 @@ $page_title = $page_title ?? "Coordenação de Estágios — IFSP";
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title><?php echo htmlspecialchars($page_title); ?></title>
+  <link rel="icon" type="image/x-icon" href="<?php echo ASSETS_PATH; ?>favicon.ico">
   <meta name="description" content="Protótipo HTML das páginas e formulários: Antes de Iniciar, Durante e Encerrando o Estágio. Baseado no manual de identidade visual do IFSP.">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo ASSETS_PATH; ?>css/style.css?v=<?php echo time(); ?>">
