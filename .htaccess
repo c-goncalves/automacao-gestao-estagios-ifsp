@@ -1,10 +1,5 @@
-AddHandler application/x-httpd-php .php
 DirectoryIndex index.php index.html
-<FilesMatch "(\.env|config\.php)">
-    Require all denied
+Options -Indexes
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
 </FilesMatch>
-
-# RewriteEngine On
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(.*)$ index.php [L,QSA]
