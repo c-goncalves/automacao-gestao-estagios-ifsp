@@ -1,17 +1,3 @@
-<?php
-$page_title = "Antes de Iniciar - Estágio IFSP";
-include '../config/db.php'; 
-include '../includes/header.php'; 
-
-$feedback = '';
-$current_step = 1;
-
-if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-    
-}
-
-?>
-
 <div class="grid">
     <section class="card" id="content-area">
         <h3 id="antes">Antes de Iniciar um Estágio</h3>
@@ -179,7 +165,3 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         showStep(0);
     })();
 </script>
-
-<?php
-include '../includes/footer.php'; 
-?>

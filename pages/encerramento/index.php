@@ -1,15 +1,16 @@
 <?php
 $page_title = "Encerrando o Estágio - Avaliação Final";
-include '../config/db.php'; 
-include '../includes/header.php';
+require_once __DIR__ . '/../../includes/header.php';
+require_once __DIR__ . '/../../config/paths.php';
+require_once __DIR__ . '/../../config/db.php';
 ?>
 
-<div class="grid">
-    <section class="card" id="content-area">
+<div class="grid-alt">
+    <section class="" id="content-area">
         <h3 id="encerrando">Encerrando o Estágio</h3>
-        <p class="small muted">Formulário de encerramento e avaliação final (funcionalidade em desenvolvimento).</p>
+        <p class="msg error">Funcionalidade Inativa</p>
 
-        <div class="card" style="margin-top:12px">
+        <!-- <div class="card" style="margin-top:12px">
             <h4>Encerramento (Protótipo)</h4>
             <p class="msg error">Esta página é um protótipo e a funcionalidade de encerramento ainda não está ativa.</p>
             <form id="encForm" action="../scripts/salvar_encerramento.php" method="POST">
@@ -33,15 +34,12 @@ include '../includes/header.php';
                     <button class="btn" type="submit">Enviar Encerramento</button>
                 </div>
             </form>
-        </div>
+        </div> -->
     </section>
 
-    <!-- SIDEBAR DE RECURSOS -->
-    <aside class="card">
-       <?php include '../includes/recursos.php'; ?>
-    </aside>
+    
 </div>
 
 <?php
-include '../includes/footer.php';
+require_once __DIR__ . '/../../includes/footer.php';
 ?>

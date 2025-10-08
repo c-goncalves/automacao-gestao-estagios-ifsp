@@ -1,28 +1,37 @@
-<?php 
-$current_page = basename($_SERVER['PHP_SELF']); 
-if (strpos($_SERVER['REQUEST_URI'], '/pages/') !== false) {
-    $base_path = '../'; 
-    $pages_path = ''; 
-} else {
-    $base_path = './'; 
-    $pages_path = 'pages/'; 
-}
-
+<?php
+require_once __DIR__ . '/../config/paths.php';
+$current_uri = $_SERVER['REQUEST_URI'];
 ?>
+
 <nav class="nav-links" aria-label="Navegação principal">
-  
-    <a href="<?php echo $base_path; ?>index.php" class="<?php echo $current_page == 'index.php' ? 'active' : ''; ?>">Início</a>
-     <a href="<?php echo $base_path; ?>pages/antes.php" 
-       class="<?php echo $current_page == 'antes.php' ? 'active' : ''; ?>">
+   <a href="<?php echo BASE_URL; ?>"
+      class="<?php echo $current_uri === BASE_URL . 'index.php' ? 'active' : ''; ?>">
+      Início
+   </a>
+
+   <a href="<?php echo PAGES_PATH; ?>solicitacoes/"
+      class="<?php echo strpos($current_uri, '/pages/solicitacoes/') !== false ? 'active' : ''; ?>">
       Solicitação
-    </a>  
-    <a href="<?php echo $base_path; ?>pages/atualizacao.php" 
-       class="<?php echo $current_page == 'atualizacao.php' ? 'active' : ''; ?>" aria-disabled="true" role="button">
+   </a>
+
+   <a href="<?php echo PAGES_PATH; ?>andamento/"
+      class="<?php echo strpos($current_uri, '/pages/andamento/') !== false ? 'active' : ''; ?>"
+      aria-disabled="true" role="button">
       Acompanhamento
-    </a>  
-    <a href="<?php echo $base_path; ?>pages/finalizacao.php" 
-       class="<?php echo $current_page == 'finalizacao.php' ? 'active' : ''; ?>">
+   </a>
+
+   <a href="<?php echo PAGES_PATH; ?>encerramento/"
+      class="<?php echo strpos($current_uri, '/pages/encerramento/') !== false ? 'active' : ''; ?>">
       Finalização
-    </a> 
-    
+   </a>
+
+   <a href="<?php echo PAGES_PATH; ?>recursos/"
+      class="<?php echo strpos($current_uri, '/pages/recursos/') !== false ? 'active' : ''; ?>">
+      Recursos
+   </a>
+
+   <a href="#<?php //echo PAGES_PATH; ?>noticias/"
+      class="<?php echo strpos($current_uri, '/pages/noticias/') !== false ? 'active' : ''; ?>">
+      Notícias
+   </a>
 </nav>

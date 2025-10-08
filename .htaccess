@@ -1,4 +1,3 @@
-
 Options -Indexes
 DirectoryIndex index.php
 
@@ -6,9 +5,32 @@ DirectoryIndex index.php
     Require all denied
 </FilesMatch>
 
-RewriteEngine Off
+RewriteEngine On
+RewriteBase /projeto/
 
-# RewriteEngine On
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(.*)$ index.php [L,QSA]
+# remove o .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([a-zA-Z0-9_/]+)/?$ $1.php [L]
+
+# modulo solicitacoes
+# index.php
+RewriteRule ^solicitacoes/?$ pages/solicitacoes/index.php [L,QSA]
+# /solicitacoes/inicio -> index.php?step=inicio
+RewriteRule ^solicitacoes/([^/]+)/?$ pages/solicitacoes/index.php?step=$1 [L,QSA]
+# /solicitacoes/cursos/{tipo}/{curso}/{step} -> index.php?tipo=...&curso=...&step=...
+RewriteRule ^solicitacoes/cursos/([^/]+)/([^/]+)/([^/]+)/?$ pages/solicitacoes/index.php?tipo=$1&curso=$2&step=$3 [L,QSA]
+# /solicitacoes/cursos/{tipo}/{step} -> index.php?tipo=...&step=...
+RewriteRule ^solicitacoes/cursos/([^/]+)/([^/]+)/?$ pages/solicitacoes/index.php?tipo=$1&step=$2 [L,QSA]
+
+# outros módulos
+RewriteRule ^andamento/?$ pages/andamento/index.php [L,QSA]
+RewriteRule ^andamento/([^/]+)/?$ pages/andamento/index.php?step=$1 [L,QSA]
+
+RewriteRule ^encerramento/?$ pages/encerramento/index.php [L,QSA]
+RewriteRule ^encerramento/([^/]+)/?$ pages/encerramento/index.php?step=$1 [L,QSA]
+
+RewriteRule ^recursos/?$ pages/recursos/index.php [L,QSA]
+
+RewriteRule ^noticias/?$ pages/noticias/index.php [L,QSA]
+RewriteRule ^noticias/([^/]+)/?$ pages/noticias/index.php?step=$1 [L,QSA]

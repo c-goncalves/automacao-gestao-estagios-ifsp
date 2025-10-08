@@ -1,17 +1,17 @@
 <?php
 $page_title = "Durante o Estágio - Relatórios";
-include '../config/db.php'; 
-include '../includes/header.php';
+require_once __DIR__ . '/../../includes/header.php';
+require_once __DIR__ . '/../../config/paths.php';
+require_once __DIR__ . '/../../config/db.php';
 ?>
 
-<div class="grid">
-    <section class="card" id="content-area">
-        <h3 id="durante">Durante o Estágio</h3>
-        <p class="small muted">Relatórios periódicos e solicitações de alteração/aditivo (funcionalidade em desenvolvimento).</p>
+<div class="grid-alt">
+    <section class="" id="content-area">
+        <h3 id="durante">Acompanhe a sua solicitação</h3>
+         <p class="msg error">Funcionalidade Inativa</p>
 
-        <div class="card" style="margin-top:12px">
-            <h4>Relatório de Acompanhamento (Protótipo)</h4>
-            <p class="msg error">Esta página é um protótipo e a funcionalidade de salvar relatórios ainda não está ativa.</p>
+        <!-- <div class="" style="margin-top:12px">
+            <h4>Acompanhamento (Protótipo)</h4>
             <form id="relatorioForm" action="../scripts/salvar_relatorio.php" method="POST" style="margin-top:8px">
                 <div class="row">
                     <div>
@@ -33,15 +33,11 @@ include '../includes/header.php';
                     <button class="btn" type="submit">Enviar Relatório</button>
                 </div>
             </form>
-        </div>
+        </div> -->
     </section>
 
-    <!-- SIDEBAR DE RECURSOS -->
-     <aside class="card">
-       <?php include '../includes/recursos.php'; ?>
-    </aside>
 </div>
 
 <?php
-include '../includes/footer.php';
+require_once __DIR__ . '/../../includes/footer.php';
 ?>
