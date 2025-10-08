@@ -1,0 +1,9 @@
+config/db.php
+*.env
+*.swp
+*.swo
+*.idea/
+*.vscode/
+*.log
+cache/
+tmp/
