@@ -41,19 +41,21 @@ include 'includes/header.php';
         </div>
 
         <div class="card" style="border-left: 4px solid var(--verde-ifsp); padding: 15px;">
-            <a href="<?php echo $base_path; ?>pages/durante.php" style="font-weight: 700; color: var(--verde-escuro); text-decoration: none;">
+            <a href="<?php echo $base_path; ?>pages/atualizacao.php" style="font-weight: 700; color: var(--verde-escuro); text-decoration: none;">
                 Você já <strong>está estagiando</strong>?
             </a>
             <p class="small" style="margin: 5px 0 0 0;">Verifique se não possui pendências de relatórios periódicos e solicite termos aditivos, se necessário.</p>
         </div>
 
         <div class="card" style="border-left: 4px solid var(--verde-ifsp); padding: 15px;">
-            <a href="<?php echo $base_path; ?>pages/encerrando.php" style="font-weight: 700; color: var(--verde-escuro); text-decoration: none;">
+            <a href="<?php echo $base_path; ?>pages/finalizacao.php" style="font-weight: 700; color: var(--verde-escuro); text-decoration: none;">
                 Você precisa <strong>encerrar um estágio</strong>?
             </a>
             <p class="small" style="margin: 5px 0 0 0;">Verifique o que é necessário para a finalização e avaliação do estágio.</p>
         </div>
     </div>
+
+    
     
   </section>
 
