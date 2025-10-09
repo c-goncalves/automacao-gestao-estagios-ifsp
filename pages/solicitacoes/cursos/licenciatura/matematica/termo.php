@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../../../../../includes/header.php';
-require_once __DIR__ . '/../../../../../config/paths.php';
 $page_title = "Solicitação de Estágio Curricular - Licenciatura em Matemática";
 
 $feedback = $feedback ?? '';
