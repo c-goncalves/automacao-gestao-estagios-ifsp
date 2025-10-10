@@ -1,4 +1,4 @@
-<section class="intro max-w-5xl mx-auto px-4 py-8">
+<section class="intro  mx-auto px-4 py-8">
   <h2 class="text-2xl font-bold text-[#006633] mb-4">Antes de Iniciar o Estágio</h2>
   <p class="text-gray-700 mb-2">Confira abaixo os passos, documentos e orientações essenciais antes de iniciar seu estágio.</p>
   <p class="text-gray-700 mb-4">Caso tenha dúvidas, entre em contato com a Coordenação de Estágios pelo e-mail <a href="mailto:coord.estagios@ifsp.edu.br" class="text-[#006633] underline">coord.estagios@ifsp.edu.br</a></p>

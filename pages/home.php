@@ -18,61 +18,95 @@ require_once BASE_PATH . '/includes/header.php';
 
 <div class="mt-2 grid grid-cols-1 lg:grid-cols-3 gap-6">
   <!-- Conteúdo principal -->
-  <section class="lg:col-span-2 bg-white p-6 rounded-xl shadow-md border-l-4 border-[#006633] bg-green-50 p-4 rounded" id="content-area">
-    <h3 class="text-xl font-semibold text-[#006633] mb-4">Estágio no IF</h3>
-    <p class="text-gray-700 text-sm mb-4">
-      <strong>Art. 1o Estágio é ato educativo escolar supervisionado</strong>, desenvolvido no ambiente de trabalho, que visa à preparação para o trabalho produtivo de educandos que estejam frequentando o ensino regular em instituições de educação superior, de educação profissional, de ensino médio, da educação especial e dos anos finais do ensino fundamental, na modalidade profissional da educação de jovens e adultos.
-    </p>
+  <section class="lg:col-span-2 bg-white p-6 rounded-xl shadow-md border-l-4 border-[#006633] bg-green-50" id="content-area">
+  <h3 class="text-xl font-bold text-[#006633] mb-4">Estágio no IF</h3>
 
-    <hr class="my-5 border-gray-300">
+  <!-- Info Box estilo "chamada do grêmio" -->
+  <div class="bg-green-100 border-l-8 border-[#006633] p-4 rounded mb-6 shadow-sm animate-pulse">
+    <h4 class="text-[#004d26] font-semibold mb-3 text-lg">O que você precisa saber:</h4>
+    <ul class="list-disc pl-6 space-y-2 text-gray-800 text-sm">
+      <li><strong>Total de horas:</strong> 400 horas, divididas em 4 etapas de 100 horas cada.</li>
+      <li><strong>Local:</strong> Livre, menos para as licenciaturas que devem ser feitas na escolas de educação básica.</li>
+      <li><strong>Início:</strong> Pode começar já no 1º semestre do curso.</li>
+      <li><strong>Orientação:</strong> Um professor orientados irá acompanhas cada etapa. Não se perca!</li>
+      <li><strong>Documentação:</strong>O Termo de Compromisso de Estágio (TCE) e o Plano de Atividades de Estágio deve ser aprovado antes de começar.</li>
+      <li><strong>Documentação:</strong>Durante o seu estágio você deverá preencher a Ficha de Acompanhamento</li>
+      <li><strong>Documentação:</strong>Já no final do seu estágio você deverá entregar </li>
+      <li>📊 <strong>Relatórios:</strong> Devem ser entregues a cada etapa. Fique em dia!</li>
+    </ul>
+  </div>
 
-    <h4 class="text-[#006633] font-semibold mb-3">Guia Rápido:</h4>
+  <p class="text-gray-700 text-sm mb-4">
+    Aqui você encontra o passo a passo do estágio: do início até o encerramento. Seguindo essas etapas, você garante que tudo seja feito certinho e sem dores de cabeça!
+  </p>
 
-    <div class="flex flex-col gap-4">
-      <!-- Card 1 -->
-      <div class="border-l-4 border-[#006633] bg-green-50 p-4 rounded">
-        <a href="<?php echo BASE_URL; ?>solicitacoes"
-           class="font-semibold text-[#09332a] hover:underline block mb-1">
-          Você vai <strong>iniciar um estágio</strong>?
-        </a>
-        <p class="text-sm text-gray-700">Inicie a sua solicitação aqui.</p>
-      </div>
+  <hr class="my-5 border-gray-300">
 
-      <!-- Card 2 -->
-      <div class="border-l-4 border-[#006633] bg-green-50 p-4 rounded">
-        <a href="<?php echo BASE_URL; ?>" class="font-semibold text-[#09332a] hover:underline block mb-1">
-          Você já <strong>está estagiando</strong>?
-        </a>
-        <p class="text-sm text-gray-700">Verifique se não possui pendências de relatórios periódicos e solicite termos aditivos, se necessário.</p>
-      </div>
+  <h4 class="text-[#006633] font-semibold mb-3">📋 Etapas do Estágio:</h4>
 
-      <!-- Card 3 -->
-      <div class="border-l-4 border-[#006633] bg-green-50 p-4 rounded">
-        <a href="<?php echo BASE_URL; ?>" class="font-semibold text-[#09332a] hover:underline block mb-1">
-          Você precisa <strong>encerrar um estágio</strong>?
-        </a>
-        <p class="text-sm text-gray-700">Verifique o que é necessário para a finalização e avaliação do estágio.</p>
-      </div>
+  <div class="flex flex-col gap-4">
+    <div class="border-l-4 border-[#006633] bg-green-50 p-4 rounded">
+      <a href="<?php echo BASE_URL; ?>solicitacoes"
+         class="font-semibold text-[#09332a] hover:underline block mb-1">
+        🚀 Início do Estágio
+      </a>
+      <p class="text-sm text-gray-700">Preencha o TCE e envie para aprovação. Só depois comece suas atividades!</p>
     </div>
-  </section>
+    <div class="border-l-4 border-[#006633] bg-green-50 p-4 rounded">
+      <a href="<?php echo BASE_URL; ?>documentos"
+         class="font-semibold text-[#09332a] hover:underline block mb-1">
+        📌 Acompanhamento
+      </a>
+      <p class="text-sm text-gray-700">Registre suas atividades, entregue relatórios periódicos e mantenha contato com seu orientador.</p>
+    </div>
+    <div class="border-l-4 border-[#006633] bg-green-50 p-4 rounded">
+      <a href="<?php echo BASE_URL; ?>aditivos"
+         class="font-semibold text-[#09332a] hover:underline block mb-1">
+        ✏️ Termos Aditivos
+      </a>
+      <p class="text-sm text-gray-700">Se mudar algo na carga horária ou atividades, registre os aditivos para não ter problemas depois.</p>
+    </div>
+    <div class="border-l-4 border-[#006633] bg-green-50 p-4 rounded">
+      <a href="<?php echo BASE_URL; ?>encerramento"
+         class="font-semibold text-[#09332a] hover:underline block mb-1">
+        🏁 Encerramento
+      </a>
+      <p class="text-sm text-gray-700">Finalize com o relatório, obtenha avaliação do orientador e confirme que todos os documentos foram entregues.</p>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Sidebar / Recursos -->
-  <aside class="bg-white p-6 shadow-md border-l-4 border-[#006633] bg-green-50 p-4 rounded">
-    <h4 class="text-[#006633] font-semibold mb-3">Recursos e Documentos</h4>
+<aside class="bg-white p-6 shadow-md border-l-4 border-[#006633] rounded">
+  
+  <!-- Destaque: Oportunidades de Estágio -->
+  <div class="mb-4 p-3 bg-green-100 ">
+    <a href="https://gru.ifsp.edu.br/vagas" target="_blank" 
+       class="text-[#006633] font-semibold hover:underline">
+      Oportunidades de estágio
+    </a>
+  </div>
 
-    <ul class="space-y-2">
-      <li><a href="#<?php echo BASE_URL; ?>" class="text-sm text-gray-700 hover:underline">Modelos de Documentos</a></li>
-      <li><a href="#<?php echo BASE_URL; ?>" class="text-sm text-gray-700 hover:underline">Normas e Regulamentos</a></li>
-      <li><a href="#<?php echo BASE_URL;?>" class="text-sm text-gray-700 hover:underline">Dúvidas Frequentes</a></li>
-    </ul>
+  <!-- Título do menu -->
+  <h4 class="text-[#006633] font-semibold mb-3 bg-green-100 p-3"><a href="<?php echo BASE_URL; ?>recursos" >Recursos e Documentos</a></h4>
 
-    <div class="mt-4">
-      <a href="<?php echo BASE_URL; ?>/pages/recursos/" class="text-[#006633] font-semibold hover:underline">
-        + Recursos
-      </a>
-    </div>
-  </aside>
-</div>
+  <!-- Lista de recursos -->
+  <ul class="space-y-2 px-4">
+    <li><a href="#<?php echo BASE_URL; ?>" class="text-sm text-gray-700 hover:underline">Modelos de Documentos</a></li>
+    <li><a href="#<?php echo BASE_URL; ?>" class="text-sm text-gray-700 hover:underline">Normas e Regulamentos</a></li>
+    <li><a href="#<?php echo BASE_URL;?>" class="text-sm text-gray-700 hover:underline">Dúvidas Frequentes</a></li>
+  </ul>
+
+  <!-- Link + Recursos -->
+  <div class="mt-4">
+    <a href="<?php echo BASE_URL; ?>/pages/recursos/" class="text-[#006633] font-semibold hover:underline">
+      + Recursos
+    </a>
+  </div>
+</aside>
+
 
 <?php 
 require_once BASE_PATH . '/includes/footer.php';
